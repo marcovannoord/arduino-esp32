@@ -110,15 +110,13 @@ set(BLE_SRCS
   libraries/BLE/src/GeneralUtils.cpp
   )
 
-set(COMPONENT_SRCS ${CORE_SRCS} ${LIBRARY_SRCS} ${BLE_SRCS})
+set(COMPONENT_SRCS ${CORE_SRCS} ${LIBRARY_SRCS})
 
 set(COMPONENT_ADD_INCLUDEDIRS
   variants/esp32/
   cores/esp32/
   libraries/ArduinoOTA/src
   libraries/AsyncUDP/src
-  libraries/BLE/src
-  libraries/BluetoothSerial/src
   libraries/DNSServer/src
   libraries/EEPROM/src
   libraries/ESP32/src
