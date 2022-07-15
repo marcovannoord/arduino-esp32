@@ -157,7 +157,9 @@ bool ETHClass::begin(uint8_t phy_addr, int power, int mdc, int mdio, eth_phy_typ
         return false;//todo
     } else {
 #endif
+#if CONFIG_ETH_USE_ESP32_EMAC || CONFIG_ETH_USE_SPI_ETHERNET 
         eth_mac = esp_eth_mac_new_esp32(&mac_config);
+#endif 
 #if CONFIG_ETH_SPI_ETHERNET_DM9051
     }
 #endif
